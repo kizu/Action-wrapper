@@ -1,0 +1,45 @@
+/* Action-wrapper pattern by https://twitter.com/kizmarh */
+
+.action-wrapper {
+    display: inline-block; /* Can be block, but not inline */
+    position: relative; /* Can't be static */
+    }
+.action-wrapper > .controller {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+    }
+
+/* Hide the text if the controller is a link */
+.action-wrapper > a.controller {
+    padding-left: 100%;
+    }
+
+/* Some extra styles if the controller is a button, also use .hidden-accessible to hide button's text */
+.action-wrapper > button.controller {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: 0;
+    }
+
+/* Blocks that need to pop out of the controller (like links in links) */
+.action-wrapper .popout {
+    position: relative;
+    }
+
+/* In some cases it's hard to hide a text everywhere, so use extra elements for this */
+.hidden-accessible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    }

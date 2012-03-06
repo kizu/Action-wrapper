@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Action-wrapper Pattern</title>
+    <style>
+/* Some presentational styles, for the Action-wraper styles see the action-wrapper.css */
+
+a,
+.dope-link > .controller + .view {
+    color: blue;
+    }
+a:hover,
+.dope-link > .controller:hover + .view {
+    color: green;
+    }
+a:active,
+.dope-link > .controller:active + .view {
+    color: red;
+    }
+
+.dope-link > .controller {
+    cursor: pointer;
+    }
+
+    </style>
+    <link rel="stylesheet" href="action-wrapper.css" />
+</head>
+<body>
+    <h1>Action-wrapper</h1>
+    <p>It's a pattern that gives you a convenient way o style anything like something else. And throw the behavior of the presentatinal thing too!</p>
+
+    <p><a href="https://github.com/kizu/Action-wrapper/">Read more on it on GitHub</a>.</p>
+
+    <h2>Some examples, starting with links</h2>
+    <p>
+        I'm a paragraph that have a
+        <label class="action-wrapper">
+            <a href="#i-am-a-link-not-a-button" class="controller">I'm a link! Screen-readers should see me.</a>
+            <span class="view" role="presentation">
+                <button type="button" tabindex="-1">link</button>
+            </span>
+        </label>
+        that that looks like a button
+    </p>
+    <p>
+        And now something strange: a file input that is a link. Ok:
+        <span class="action-wrapper">
+            <a href="#i-am-a-link-not-a-file-input" class="controller">I'm a link! Screen-readers should see me.</a>
+            <span class="view dope-link" role="presentation">
+                <input type="file" tabindex="-1"/>
+            </span>
+        </span>
+    </p>
+    <p>
+        A combination of a select and a checkbox? Yeah:
+        <span class="action-wrapper">
+            <a href="#i-am-a-link-not-a-chexkbox-and-select" class="controller">I'm a link! Screen-readers should see me.</a>
+            <span class="view" role="presentation">
+                <input type="checkbox" tabindex="-1"/>
+                <select tabindex="-1">
+                    <option>I'm an option!</option>
+                </select>
+            </span>
+        </span>
+    </p>
+    <div class="action-wrapper dope-link">
+        <a href="#i-am-a-link-not-a-block" class="controller">I'm a link! Screen-readers should see me.</a>
+        <div class="view" role="presentation">
+            <h3>I'm just some header</h3>
+            <p>I'm a link and can have <a class="popout" href="#other">other</a> <a class="popout" href="#links">links</a> in me!</p>
+        </div>
+    </div>
+
+    <h2>And other examples</h2>
+        <form action="">
+        <p>
+            I'm another paragraph that have some
+            <label class="action-wrapper dope-link">
+                <button type="submit" class="controller"><span class="hidden-accessible">I'm a button! Screen-readers should see me.</span></button>
+                <a class="view" href="#" role="presentation" tabindex="-1">submit</a>
+            </label>
+            <label class="action-wrapper dope-link">
+                <button type="submit" class="controller"><span class="hidden-accessible">I'm a button! Screen-readers should see me.</span></button>
+                <a class="view" href="#" role="presentation" tabindex="-1">buttons</a>
+            </label>
+            that look like links. Try to change press “tab” to switch focus state on them!]
+        </p>
+    </form>
+
+    <hr/>
+
+    <footer>
+        <p>Checkboxes, Radiobuttons, file inputs and more coming soon :) Along with IE support and some better styles for this pahe. Stay tuned!</p>
+
+        <p>By <a href="https://twitter.com/#!/kizmarh">@kizmarh</a>. <a href="https://github.com/kizu/Action-wrapper/">Fork me at github</a>!</p>
+    </footer>
+
+    <!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter10205473 = new Ya.Metrika({id:10205473, enableAll: true, trackHash:true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/10205473" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body>
+</html>
