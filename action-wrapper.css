@@ -11,6 +11,8 @@
     bottom: 0;
     left: 0;
 
+    cursor: pointer; /* In most cases you'll want the pointer cursor over the custom elements */
+
     overflow: hidden;
     }
 
@@ -27,6 +29,26 @@
     border: 0;
     margin: 0;
     background: 0;
+    }
+
+/* Playing with the file input and selects, however, they need an extra wrapper (so, span.controller > input) */
+.action-wrapper > .controller > input,
+.action-wrapper > .controller > select {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+
+    width: 100%;
+    margin: 0;
+
+    cursor: pointer;
+
+    font-size: 10em;
+
+    opacity: 0; /* Important! */
+    }
+.action-wrapper > .controller > select {
+    font-size: 1.2em; /* Can be adjusted for better result */
     }
 
 /* Blocks that need to pop out of the controller (like links in links) */

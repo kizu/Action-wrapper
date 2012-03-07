@@ -19,10 +19,6 @@ a:active,
     color: red;
     }
 
-.dope-link > .controller {
-    cursor: pointer;
-    }
-
     </style>
     <link rel="stylesheet" href="action-wrapper.css" />
 </head>
@@ -84,7 +80,40 @@ a:active,
                 <button type="submit" class="controller"><span class="hidden-accessible">I'm a button! Screen-readers should see me.</span></button>
                 <a class="view" href="#" role="presentation" tabindex="-1">buttons</a>
             </label>
-            that look like links. Try to change press “tab” to switch focus state on them!]
+            that look like links. Try to change press “tab” to switch focus state on them!
+        </p>
+
+        <p>
+            And here is a
+            <label class="action-wrapper dope-link">
+                <span class="controller">
+                    <input type="file" />
+                </span>
+                <a class="view" href="#" role="presentation" tabindex="-1">file input</a>
+            </label>
+            that is also look like a link. Or a
+            <label class="action-wrapper">
+                <span class="controller">
+                    <input type="file" />
+                </span>
+                <button type="button" class="view" role="presentation" tabindex="-1">button</button>
+            </label>
+            with the same behavior.
+        </p>
+
+        <p>
+            Or maybe you'll want a select box?
+            <label class="action-wrapper dope-link">
+                <span class="controller">
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </span>
+                <a class="view" href="#" role="presentation" tabindex="-1">We have one and it's styled as a link</a>
+            </label>.
+             However, you'll see nothing after chosing the file or an option, for that purpose you'll need a little of JS.
         </p>
     </form>
 
