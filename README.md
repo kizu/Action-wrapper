@@ -1,12 +1,12 @@
 # Action-wrapper
 
-Hi, this is the description of one html/css pattern that makes it easy to disquise any one element with any other presentation. So you could style links as buttons, buttons as links, File inputs as checkboxes, radios as multiple select boxes… Wait, what?!
+Hi, this is the description of the html/css pattern that makes it easy to disguise any one element with any other presentation. So you could style links as buttons, buttons as links, file inputs as checkboxes, radios as multiple select boxes… Wait, what?!
 
 Ok, those examples are not that nice. However, using this pattern you could make links inside links, any custom checkboxes ot radios, even custom file inputs or selects (the last two cases would need a simple js to get the file's name or text of selected option).
 
 ## The concept
 
-It's rather simple: you have the `controller` and the `view`. And a wrapper. the `controller` is a invisible block that is stretched over the wrapper. The `view` is anything that goes after the `controller`, so you could style it using the `+` selector and pseudoclasses on the `controller`.
+It's rather simple: you have the `controller` and the `view`. And a wrapper. The `controller` is a invisible block that is stretched over the wrapper. The `view` is anything that goes after the `controller`, so you could style it using the `+` selector and pseudoclasses on the `controller`.
 
 ## Semantics?
 
